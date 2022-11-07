@@ -1,20 +1,17 @@
 body{
-    --color-primary: #f7a76c;
+    --color-primary: #FE4400;
     --color-primary-dark: #FF9551;
+    --color-gradient: linear-gradient(#000012, #000051);
     --color-secondary: #874C62;
     --color-error: #EC7272;
     --color-success: #4bb544;
     --border-radius: 4px;
 
     margin: 0;
-    /*display: flex;
-    height: 100vh;
-    align-items: right;
-    justify-content: right;
     font-size: 18px;
-    background: var(--color-primary);
-    background-size: cover;*/
+    font: 500 1rem 'Quicksand', sans-serif;
 }
+
 .leftside,
 .rightside{
     height: 100vh;
@@ -22,29 +19,45 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
 }
 .rightside{
     background: #fff;
 }
 
 .leftside{
-    background: var(--color-primary);
+    background: var(--color-gradient);
+    color: #fff;
 }
-.container{
+
+.container-right{
     width: 400px;
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
-    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); */
     border-radius: var(--border-radius);
     background: #fff;
 }
 
-.container,
+.container-left{
+    width: 600px;
+    max-width: 600px;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.form__link{
+    text-align: right;
+}
+
+.container-right,
+.container-left,
 .form__input,
 .form__text,
 .form__button{
-    font: 500 1rem 'Quicksand', sans-serif;
+    font: 500 1rem 'Metropolis', sans-serif;
 }
 
 .form > *:first-child{
@@ -57,6 +70,7 @@ body{
 
 .form__title{
     margin-bottom: 2rem;
+    padding: 5%;
     text-align: center;
 }
 
@@ -74,7 +88,7 @@ body{
 }
 
 .form__input-group{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .form__input{
@@ -110,6 +124,8 @@ body{
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #ffff;
     border: none;
     border-radius: var(--border-radius);
@@ -133,6 +149,7 @@ body{
 .form__link{
     color: var(--color-secondary);
     text-decoration: none;
+    text-align: right;
     cursor: pointer;
 }
 
