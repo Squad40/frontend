@@ -23,6 +23,7 @@ body{
 }
 .rightside{
     background: #fff;
+    position: relative;
 }
 
 .leftside{
@@ -49,7 +50,14 @@ body{
 }
 
 .form__link{
-    text-align: right;
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .container-right,
@@ -58,6 +66,7 @@ body{
 .form__text,
 .form__button{
     font: 500 1rem 'Metropolis', sans-serif;
+    margin-bottom: 0;
 }
 
 .form > *:first-child{
