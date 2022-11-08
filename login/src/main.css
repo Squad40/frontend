@@ -2,7 +2,7 @@ body{
     --color-primary: #FE4400;
     --color-primary-dark: #FF9551;
     --color-gradient: linear-gradient(#000012, #000051);
-    --color-secondary: #874C62;
+    --color-secondary: #80CBF4;
     --color-error: #EC7272;
     --color-success: #4bb544;
     --border-radius: 4px;
@@ -49,15 +49,15 @@ body{
     text-align: center;
 }
 
-.form__link{
-    text-align: center;
-}
-
 .container{
     text-align: center;
     justify-items: center;
     position: absolute;
     bottom: 0;
+    padding: 1rem;
+    right: 0;
+    margin-left: 0;
+
 }
 
 .container-right,
@@ -155,11 +155,16 @@ body{
     text-align: right;
 }
 
-.form__link{
+.form__link,
+.form__link-pass{
     color: var(--color-secondary);
     text-decoration: none;
     text-align: right;
     cursor: pointer;
+}
+
+.form__link-pass{
+    float: right;
 }
 
 .form__link:hover{
