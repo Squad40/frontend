@@ -3,6 +3,7 @@ body{
     --color-primary-dark: #FF9551;
     --color-gradient: linear-gradient(#000012, #000051);
     --color-secondary: #80CBF4;
+    --color-text: #A9A9A9;
     --color-error: #EC7272;
     --color-success: #4bb544;
     --border-radius: 4px;
@@ -57,7 +58,6 @@ body{
     padding: 1rem;
     right: 0;
     margin-left: 0;
-
 }
 
 .container-right,
@@ -67,6 +67,18 @@ body{
 .form__button{
     font: 500 1rem 'Metropolis', sans-serif;
     margin-bottom: 0;
+}
+
+span{
+    position: absolute;
+    left: 482px;
+    top: 52%;
+    transform: translate(0, 50%);
+    cursor: pointer;
+}
+
+.fa-eye{
+    color: var(--color-text);
 }
 
 .form > *:first-child{
