@@ -4,7 +4,7 @@
     --color-primary-light: #A9A9A9;
     --color-text: #CFCFCF;
     --color-text-light: #FFFFFF;
-    --background-gradient-blue: linear-gradient(to bottom right, #000012, #000051)
+    --background-gradient-blue: linear-gradient(#000012, #000051);
     --background-gray: #232323;
     --background-gray-light: #2C3037;
 }
@@ -51,7 +51,7 @@ body{
     width: 100%;
     height: var(--bar-height);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    background-color: var(--background-gradient-blue);
+    background: var(--background-gradient-blue);
 }
 
 
@@ -64,4 +64,67 @@ body{
 
 .bar__logo{
     height: 100%;
+}
+
+.bar__nav-toggle{
+    cursor: pointer;
+}
+
+.bar__nav-toggle > i{
+    color: var(--color-text-light);
+    font-size: 2rem;
+}
+#inpNavToggle{
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav{
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--bar-height));
+    background: var(--color-primary);
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.nav__link{
+    font-weight: 500;
+    padding: 16px 0;
+    text-decoration: none;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--background-gray-light);
+}
+
+.nav__link:hover{
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 767px){
+    .bar__nav-toggle{
+        display: none;
+    }
+    .nav{
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    .nav__link{
+        border-bottom: none;
+    }
+
+    .nav__link:not(:last-of-type){
+        margin-right: 24px;
+    }
 }

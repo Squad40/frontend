@@ -13,8 +13,6 @@
 
 <body>
    
-    <script src="./src/main.js"></script>
-
    <header class="header">
         <div class="top-center">
             <div class="continuar-de-onde-parou">
@@ -25,10 +23,24 @@
 
    <div class="bar">
         <div class="bar__content top-center">
-            <img src="../assets/logo-lateral.png" alt="Logo Orange Juice" class="bar__logo">
+            <img src="../assets/logo-lateral.png" alt="Logo Orange Evolution" class="bar__logo">
+            <input type="checkbox" id="inpNavToggle">
+            <label class="bar__nav-toggle" for="inpNavToggle">
+                <i class="material-icons">menu</i>
+            </label>
+            <nav class="nav">
+                <a class="nav__link" href="../home/home.html">
+                    <img src="../assets/home.png" alt="Página Inicial">
+                </a>
+                <a class="nav__link" href="https://discord.com/invite/NtESsDFGx5">
+                    <img src="../assets/discord.png" alt="Discord">
+                </a>
+                <a class="nav__link" href="../login/index.html">
+                    <img src="../assets/sair.png" alt="Sair">
+                </a>
+            </nav>
         </div>
    </div>
-
 
     <script src="./src.main.js"></script>
 </body>
