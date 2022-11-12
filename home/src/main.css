@@ -12,11 +12,10 @@
 body{
     margin: 0;
     font-family: 'Metropolis', sans-serif;
+    background: var(--background-gray-light);
 }
 
 .header{
-    height: 100vh;
-    background: var(--background-gray-light);
     display: flex;
     align-items: center;
     padding-top: var(--bar-height);
@@ -31,12 +30,14 @@ body{
     box-sizing: border-box;
 }
 
-.continuar-de-onde-parou{
+.continuar-de-onde-parou,
+.conheca-nossas-trilhas,
+.welcome{
     padding: 32px;
     box-sizing: border-box;
 }
 
-.continuar-de-onde-parou__title{
+.ref__title{
     margin-top: 0;
     font-weight: 500;
     font-size: 1.1rem;
