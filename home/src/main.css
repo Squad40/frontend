@@ -120,11 +120,22 @@ body{
 
 .footer__bottom{
     width: 100vw;
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
     color: var(--color-text-light);
-    position: absolute;
+    word-spacing: 2px;
+    /* background: #000012; */
+    /* position: absolute; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFF;
+    padding-top: 0.5rem;
 }
+
 
 @media screen and (min-width: 767px){
     .bar__nav-toggle{
