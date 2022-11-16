@@ -1,0 +1,204 @@
+:root{
+    --bar-height: 4.5rem;
+    --color-primary: #303033;
+    --color-primary-light: #A9A9A9;
+    --color-text: #CFCFCF;
+    --color-text-light: #FFFFFF;
+    --background-gradient-blue: linear-gradient(#000012, #000051);
+    --background-gray: #232323;
+    --background-gray-light: #2C3037;
+}
+
+body{
+    margin: 0;
+    font-family: 'Metropolis', sans-serif;
+    background: var(--background-gray-light);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: var(--bar-height);
+    box-sizing: border-box;
+}
+
+h2{
+    color: var(--color-text-light);
+    font-size: medium;
+    margin: 2rem;
+}
+
+p{
+    color: var(--color-text-light);
+    font-size: small;
+}
+
+.top-center{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.conheca-nossas-trilhas,
+.welcome{
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.ref__title{
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
+.bar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: var(--background-gradient-blue);
+}
+
+
+.bar__content,
+.footer__content{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar__logo{
+    height: 100%;
+}
+
+.bar__nav-toggle{
+    cursor: pointer;
+}
+
+.bar__nav-toggle > i{
+    color: var(--color-text-light);
+    font-size: 2rem;
+}
+#inpNavToggle{
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav{
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--bar-height));
+    background: var(--color-primary);
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.nav__link{
+    font-weight: 500;
+    padding: 16px 0;
+    text-decoration: none;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--background-gray-light);
+}
+
+.nav__link:hover{
+    opacity: 0.8;
+}
+
+.grid-layout-33{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid-layout-33 > div{
+    background: var(--background-gradient-blue);
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0px 0px;
+    margin: 80px auto 80px auto;
+    border-radius: 10px;
+    border: 2px solid var(--background-gradient-blue);
+    padding: 20px;
+    width: 100%;
+}
+
+.grid-layout-33 > div:hover{
+    transition: 0.25s ease-in;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.png-icon{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    float: center;
+}
+
+.footer{
+    background: var(--background-gray);
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer__bottom{
+    width: 100vw;
+    padding: 0;
+    text-align: center;
+    color: var(--color-text-light);
+    word-spacing: 2px;
+    /* background: #000012; */
+    /* position: absolute; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFF;
+    padding-top: 0.5rem;
+}
+
+
+@media screen and (min-width: 767px){
+    .bar__nav-toggle{
+        display: none;
+    }
+    .nav{
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    .nav__link{
+        border-bottom: none;
+    }
+
+    .nav__link:not(:last-of-type){
+        margin-right: 24px;
+    }
+}
